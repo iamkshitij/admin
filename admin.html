@@ -1,0 +1,128 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="shortcut icon" type="image/x-icon" href="favico.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Welcome TO ZAppRead</title>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+    <!-- Bootstrap -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.1/summernote.css" rel="stylesheet">
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.1/summernote.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<style>
+    *{
+        font-family: serif;
+    }
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #333;
+    }
+
+    li {
+        float: left;
+    }
+
+    li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+
+    /* Change the link color to #111 (black) on hover */
+    li a:hover {
+        background-color: #111;
+        color: white;
+        text-decoration: none;
+    }
+    .active {
+        background-color: #4CAF50;
+
+    }
+    .container{
+        margin-top:20px ;
+    }
+    .form-control{
+        border-radius: 0em;
+    }
+    .btn{
+        border-radius: 0em;
+    }
+    .row{
+        margin-top: 25px;
+    }
+</style>
+<ul>
+    <li><a href="#">ZAppRead</a> </li>
+    <li style="float: right;"><a href="logout.php" class="active"><i class="fa fa-power-off" aria-hidden="true"></i> Logout</a></li>
+</ul>
+<div class="container">
+<h1>welcome </h1>Kshitij Mudgal    <div class="panel panel-default">
+        <div class="panel-body">
+            <form method="post" action="admin_script.php">
+                <div class="form-group">
+                    <select class="form-control" name="category">
+                        <option value="default">select a category</option>
+                        <option value="innovation">INNOVATION</option>
+                        <option value="bigpictures">BIG PICTURES</option>
+                        <option value="talk">TALK</option>
+                        <option value="inspiration">INSPIRATION</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <input type="text" class="form-control" name="title" placeholder="Enter title">
+                </div>
+
+                <div class="form-group">
+                    <input type="text" class="form-control" name="description" placeholder="Enter short description">
+                </div>
+
+                <div class="form-group">
+                    <input type="text" class="form-control" name="cover_image" placeholder="Enter url of cover image">
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Your content goes here:</label>
+                    <textarea id="summernote" class="form-control" name="content"></textarea>
+                    <script>
+                        $(document).ready(function() {
+                            $('#summernote').summernote();
+                        });
+                    </script>
+                </div>
+
+                <div class="form-group">
+                    <button type="submit" name="submit" class="btn btn-danger" style="float: right;">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+
+</div>
+
+</body>
+</html>
